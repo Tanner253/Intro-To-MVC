@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+@model IEnumerable<lab11_mvc.Models.Wine>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <header>
+        <h1>This is the result of your query!</h1>
+    </header>
+    <main>
+        <p>this is the main section of the webpage!</p>
+
+        @foreach (var value in Model)
+        {
+            <p>ID: @value.ID - Price: @value.Price - Points: @value.Points - Winery: @value.Winery</p>
+        }
+
+        <a asp-controller="Home" asp-action="Index"> Make new search </a>
+    </main>
+</body>
+</html>
